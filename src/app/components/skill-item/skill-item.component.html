@@ -1,0 +1,17 @@
+<div class="w-36 h-36 relative">
+    <div
+      class="skill-circle w-full h-full rounded-full flex items-center justify-center relative before:content-[''] before:absolute before:w-[90%] before:h-[90%] before:rounded-full before:bg-[#f5f5f5]"
+      [ngStyle]="{
+        background:
+          'conic-gradient(#274059 0% var(--percentage), #e0e0e0 var(--percentage) 100%)'
+      }"
+    >
+      <div class="relative z-10 flex flex-col items-center justify-center">
+        <span class="skill-percentage text-2xl font-bold text-[#274059]">
+          {{ percentage }}%
+        </span>
+        <span class="text-base text-[#274059] text-center">{{ name }}</span>
+      </div>
+    </div>
+  </div>
+  

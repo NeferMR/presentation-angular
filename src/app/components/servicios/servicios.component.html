@@ -1,0 +1,26 @@
+<section
+  class="bg-[#416e9b] p-4 pb-16 shadow-lg text-center font-mono lg:py-4 lg:px-20 xl:py-4 xl:px-60"
+>
+  <h2 class="text-3xl font-bold text-center mb-12">Servicios</h2>
+  <ul class="list-none flex flex-wrap justify-center gap-4 items-center w-full">
+    @for (servicio of servicios; track servicio.titulo) {
+    <li
+      class="flex flex-col flex-wrap items-center gap-4 w-[30%] min-w-64 p-4 box-border"
+    >
+      <i
+        class="{{ servicio.icono }} 
+        text-5xl
+        text-[#416e9b]
+        bg-white
+        p-4
+        rounded-full
+        text-center
+        mt-4
+        relative"
+      ></i>
+      <h3 class="text-xl text-white">{{ servicio.titulo }}</h3>
+      <p class="text-[#c0c0c0]">{{ servicio.descripcion }}</p>
+    </li>
+    }
+  </ul>
+</section>

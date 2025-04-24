@@ -1,0 +1,24 @@
+ul:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 95%;
+  background-color: #cccccc;
+  position: absolute;
+  left: 1.7rem;
+  top: 1.5rem;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  ul:before {
+    left: 6.7rem;
+    top: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  ul:before {
+    left: 16.7rem;
+  }
+}

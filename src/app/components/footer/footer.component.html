@@ -1,0 +1,47 @@
+<!-- Modal -->
+<div
+  *ngIf="isModalOpen"
+  class="flex fixed top-0 left-0 right-0 w-full h-full bg-black/70 z-50 justify-center items-center font-mono"
+>
+  <div class="bg-white p-8 rounded-2xl max-w-[500px] w-[90%] text-center">
+    <h3 class="text-[#274059] mb-6 text-xl">
+      Esta página está hecha con React y Tailwind, pero puedes verla en
+      diferentes tecnologías
+    </h3>
+    <div class="flex flex-col gap-4 my-6">
+      <div
+        *ngFor="let tech of techItems"
+        class="flex justify-between items-center bg-[#f5f5f5] p-3 rounded-lg"
+      >
+        <span class="font-bold text-[#274059]">{{ tech.name }}</span>
+        <button
+          class="bg-[#416e9b] text-white border-none py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#5a8ab8]"
+        >
+          <a [href]="tech.link" target="_blank" rel="noopener noreferrer">Ir</a>
+        </button>
+      </div>
+    </div>
+    <button
+      class="bg-[#274059] text-white border-none py-3 px-6 rounded-lg cursor-pointer mt-4 transition-colors duration-300 ease-in-out hover:bg-[#416e9b]"
+      (click)="closeModal()"
+    >
+      Cerrar
+    </button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer
+  *ngIf="!isModalOpen"
+  class="fixed bottom-0 left-0 right-0 bg-[#274059] text-white p-2 text-center z-50 transition-transform duration-300 ease-in-out font-mono"
+>
+  <div class="flex justify-center items-center gap-4">
+    <p>Esta página está hecha con React y Tailwind</p>
+    <button
+      class="bg-[#416e9b] text-white border-none py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300 ease-in-out"
+      (click)="openModal()"
+    >
+      Saber más
+    </button>
+  </div>
+</footer>

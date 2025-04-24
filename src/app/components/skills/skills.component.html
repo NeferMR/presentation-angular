@@ -1,0 +1,10 @@
+<section class="bg-[#f5f5f5] p-4 text-center font-mono lg:py-4 lg:px-20 xl:py-4 xl:px-60">
+  <h2 class="text-5xl font-bold mt-20 mb-4">Habilidades</h2>
+  <div class="flex justify-center gap-32 flex-wrap p-8">
+    <app-skill-item
+      *ngFor="let skill of skills"
+      [percentage]="skill.percentage"
+      [name]="skill.name"
+    ></app-skill-item>
+  </div>
+</section>
